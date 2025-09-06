@@ -1,12 +1,48 @@
-# React + Vite
+# Real-Time Collaborative Code Editor
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A full-stack web application enabling multiple users to edit code simultaneously in real-time. Built to simulate the core functionality of modern collaborative development environments.
 
-Currently, two official plugins are available:
+## 🚀 Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Live Multi-User Editing:** Synchronized code editing using WebSockets (Socket.IO) with operational transformation for conflict resolution.
+- **Rich Editor Interface:** Powered by Monaco Editor (the core of VS Code) for a feature-rich editing experience with syntax highlighting.
+- **Live Cursor Tracking:** See other participants' cursors and edits in real-time, enhancing collaboration.
+- **Role-Based Access Control:** Secure user authentication (JWT) and authorization to manage edit/view permissions.
+- **Instant Output Display:** Integrated console to display code output instantly.
 
-## Expanding the ESLint configuration
+## 🛠️ Tech Stack
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- **Frontend:** React, Monaco Editor, Socket.IO Client
+- **Backend:** Node.js, Express, Socket.IO
+- **Authentication:** JWT (JSON Web Tokens)
+- **Deployment:** (Mention if deployed, e.g., Vercel for frontend, Railway/Render for backend)
+
+## 📦 Installation & Setup
+
+1.  Clone the repository:
+    ```bash
+    git clone https://github.com/your-username/real-time-collab-editor.git
+    cd real-time-collab-editor
+    ```
+
+2.  Install dependencies for both client and server:
+    ```bash
+    # Install server dependencies
+    cd server
+    npm install
+
+    # Install client dependencies
+    cd ../client
+    npm install
+    ```
+
+3.  Start the development servers:
+    ```bash
+    # Start the backend server (from /server)
+    npm run dev
+
+    # Start the frontend client (from /client)
+    npm start
+    ```
+
+4.  Open [http://localhost:3000](http://localhost:3000) to view the application.
